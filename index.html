@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contaienr-fluid">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="card"  style="width: 24rem;">
+                <div class="mb-3">
+                  <label class="form-label">กรอกคะแนน (0-100) </label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <button class="btn btn-success" onclick="checkInput()">OK !!</button>
+        </div>
+        <p class="demo" id="demo"></p>
+        </div>
+    </div>
+    <script>
+        function checkInput(){
+            var input = document.getElementById("name").value;
+            if(input >= 80 && input <= 100){
+                document.getElementById("demo").innerHTML = "เกรด A";
+            }else if(input >= 75 && input <= 79){
+                document.getElementById("demo").innerHTML = "เกรด B+";
+            }else if(input >= 70 && input <= 74){
+                document.getElementById("demo").innerHTML = "เกรด B";
+            }else if(input >= 65 && input <= 69){
+                document.getElementById("demo").innerHTML = "เกรด C+";
+            }else if(input >= 60 && input <= 64){
+                document.getElementById("demo").innerHTML = "เกรด C";
+            }else if(input >= 55 && input <= 59){
+                document.getElementById("demo").innerHTML = "เกรด D+";
+            }else if(input >= 50 && input <= 54){
+                document.getElementById("demo").innerHTML = "เกรด D";
+            }else if(input >= 0 && input <= 49){
+                document.getElementById("demo").innerHTML = "เกรด E";
+            }else{
+                document.getElementById("demo").innerHTML = "ERROR";
+            }
+        }
+    </script>
+</body>
+</html>
